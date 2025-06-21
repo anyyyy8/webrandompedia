@@ -1,10 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-@media (max-width: 768px) {
+   @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: calc(var(--nav-height) + 30px) 20px 30px;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* ⬇ Tambahan: pastikan gambar tidak terhalangi */
   .image {
-    background-position: top center;
+    margin-top: 80px;
   }
 }
+
+
+@media (max-width: 480px) {
+      .navbar-brand {
+        font-size: 12px;
+      }
+
+      .character-img {
+        max-width: 100%;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+      .image {
+      margin-top: 80px;
+   
+  }
+    }
 
 body{
   font-family: "Press Start 2P", system-ui;
@@ -15,7 +61,7 @@ body{
 .deskripsi{
   font-family: "Pixelify Sans", system-ui;
   font-size: 20px;
-  text-align: justify;
+  text-align:center;
   padding: 30px;
 }
 .navbar {
@@ -23,7 +69,7 @@ body{
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
-  padding: 16px 40px;
+  padding: 16px 14px;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -42,10 +88,7 @@ body{
 }
 .navbar-brand {
     text-decoration: none;
-  font-size: 25px;
-  background: linear-gradient(to right, #ffffff, #ffbf00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 20px;
 }
 
 .navbar-nav {
@@ -62,34 +105,6 @@ body{
 .nav-link:hover {
   color: goldenrod; /* Hover efek */
 }
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #444;
-  border: 1px solid #ffffff;
-  padding: 10px;
-  border-radius: 4px;
-  z-index: 1001;
-  flex-direction: column;
-}
-
-.dropdown-menu a {
-  display: block;
-  color: #ff0000;
-  text-decoration: none;
-  margin: 5px 0;
-  font-size: 12px;
-}
-
-.dropdown-menu a:hover {
-  color: #0f0;
-}
 .show {
   display: flex !important;
 }
@@ -97,7 +112,7 @@ body{
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 20px;
       padding: 40px;
       background-color: #424242;
     }
@@ -107,8 +122,8 @@ body{
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      width: 300px;
-      text-align: left;
+      width: 250px;
+      text-align: center;
       transition: transform 0.3s ease;
     }
 
@@ -148,9 +163,33 @@ body{
       text-decoration: underline;
     }
     .image {
+      border-radius: 10px;
      width: 100%; /* lebar 100% dari viewport */
   height: 100vh; /* tinggi 100% dari viewport */
   background-position: center; /* pusatkan gambar */
   background-size: cover; /* pastikan gambar mengisi seluruh area */
   background-repeat: no-repeat;
     }
+    .audio-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.audio-container p a {
+  font-family: "Pixelify Sans", system-ui;
+  color: #f97316; /* orange */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.audio-container p a:hover {
+  text-decoration: underline;
+  color: #ffd700; /* gold */
+}
+
+.audio-container audio {
+   display: none; /* menyembunyikan pemutar audio */
+}

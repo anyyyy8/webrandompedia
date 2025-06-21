@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brook</title>
+    <title>Monkay D. Luffy</title>
 </head>
 <body>
      <!-- navbar -->
@@ -23,7 +23,7 @@ body{
   color: #e7e7e7;
 }
 .navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  background-color: transparent; /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
@@ -64,6 +64,124 @@ body{
 .nav-link:hover {
   color: goldenrod; /* Hover efek */
 }
+   /* Container */
+    .container {
+      text-align: center;
+      padding:82px 20px 40px;
+    }
+
+    /* Animasi gambar masuk dari atas */
+    .character-img {
+     width: 80%;
+      max-width: 600px;
+      height: auto;
+      opacity: 0;
+      transform: translateY(-100px);
+      animation: slideDown 1s ease-out forwards;
+      animation-delay: 0.5s;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Tombol */
+    .button {
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 2px solid #333;
+      background-color: white;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+    }
+
+    /* Teks Deskripsi */
+    .description {
+      max-width: 600px;
+      margin: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ffffff;
+      opacity: 0;
+      animation: ghostIn 1s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes ghostIn {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+     /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: calc(var(--nav-height) + 30px) 20px 30px;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* ⬇ Tambahan: pastikan gambar tidak terhalangi */
+  .character-img {
+    margin-top: 80px;
+  }
+}
+
+
+@media (max-width: 480px) {
+      .description {
+        font-size: 13px;
+      }
+
+      .navbar-brand {
+        font-size: 12px;
+      }
+
+      .character-img {
+        max-width: 100%;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+      .character-img {
+      margin-top: 80px;
+  }
+    }
     </style>
 </head>
 <body>
@@ -75,5 +193,27 @@ body{
     <a href="arwi.html" class="nav-link">One Piece menu</a>
   </div>
   </nav>
+
+  <div>
+   <div class="container">
+    <img src="../img/gambararwi/zoro 2.jpg" alt="Karakter" class="character-img"/>
+
+    <div>
+      <button class="button">Klik di sini</button>
+    </div>
+
+    <div class="description">
+      <p>Roronoa Zoro juga dikenal sebagai "Pemburu Bajak Laut" Zoro merupakan pejuang utama dari Bajak Laut Topi Jerami, salah satu dari dua pendekar mereka dan salah satu Perwira Senior dari Armada Besar Topi Jerami dan secara publik diakui sebagai tangan kanan dari kapten Monkey D. Luffy. Sebelumnya Zoro merupakan pemburu hadiah dan setelah bergabung ke dalam kru Topi Jerami dia secara resmi menjadi anggota kedua kru Luffy dan yang pertama bergabung, pada Arc Romance Dawn.</p>
+      <br>
+      <p>Lahir di East Blue, Zoro adalah putra Tera dan Roronoa Arashi, cucu dari Shimotsuki Furiko dan Roronoa Pinzoro, dikarenakan menjadi cucu dari Shimotsuki Furiko yang menjadikannya keturunan asli dari Keluarga Shimotsuki dari Negara Wano dan samurai legendaris, Shimotsuki Ryuma. Sebagai ahli Gaya Tiga Pedang, gaya ilmu pedang yang ia ciptakan selama pelatihan masa kecilnya di Desa Shimotsuki, Zoro adalah salah satu dari tiga petarung paling kuat di Topi Jerami, bersama Luffy dan Sanji , yang disebut sebagai "Trio Monster". Impiannya adalah menjadi pendekar pedang terhebat di dunia, untuk memenuhi janji yang dia buat kepada mendiang teman masa kecilnya Kuina.</p>
+      <br>
+      <p>Selain keburukannya sebagai salah satu Topi Jerami dan sebagai mantan pemburu hadiah, harga buronannya yang cukup besar saat tiba di Kepulauan Sabaody menyebabkan Zoro, bersama dengan Luffy termasuk di antara sebelas "Super Rookie", Zoro merupakan anggota bajak laut yang secara bersamaan mencapai Red Line dengan harga buronan lebih dari 100.000.000 sesaat sebelum Perang Puncak.</p>
+      <br>
+      <p>Zoro memperoleh bounty pertamanya sebesar 60.000.000 setelah Arc Alabasta. Kemudian meningkat menjadi 120.000.000 setelah insiden Enies Lobby, kemudian meningkat lagi menjadi 320.000.000 setelah Arc Dressrosa. Setelah Raid on Onigashima, harga buronannya ditingkatkan menjadi 1,111,000,000.</p>
+    </div>
+  </div>
+
+</body>
+</html>
 </body>
 </html>

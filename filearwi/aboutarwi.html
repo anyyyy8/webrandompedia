@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>Monkay D. Luffy</title>
 </head>
 <body>
+     <!-- navbar -->
    <style>
       @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .image {
     background-position: top center;
   }
@@ -22,7 +23,7 @@ body{
   color: #e7e7e7;
 }
 .navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  background-color: transparent; /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
@@ -63,53 +64,108 @@ body{
 .nav-link:hover {
   color: goldenrod; /* Hover efek */
 }
-.content {
-      display: flex;
-      flex-direction: row; /* gambar di kiri */
-      gap: 40px;
-      padding: 50px 40px 40px 40px;
-      object-fit: cover;
+   /* Container */
+    .container {
+      text-align: center;
+      padding:82px 20px 40px;
     }
 
-    .content img {
-      width: 450px;
+    /* Animasi gambar masuk dari atas */
+    .character-img {
+     width: 80%;
+      max-width: 600px;
       height: auto;
-        border-radius: 10px;
-      padding-top: 20px;
+      opacity: 0;
+      transform: translateY(-100px);
       animation: slideDown 1s ease-out forwards;
+      animation-delay: 0.5s;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px black;
+      margin-bottom: 50px;
     }
-    /* Animasi slide dari atas untuk gambar */
-@keyframes slideDown {
-  0% {
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .description {
+      max-width: 700px;
+      margin: auto;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      opacity: 0;
+      animation: ghostIn 1s ease forwards;
+      animation-delay: 1.5s;
+    }
+   
+
+    @keyframes ghostIn {
+  from {
+    filter: blur(10px);
     opacity: 0;
-    transform: translateY(-50px);
   }
-  100% {
+  to {
+    filter: blur(0);
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: calc(var(--nav-height) + 30px) 20px 30px;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* ⬇ Tambahan: pastikan gambar tidak terhalangi */
+  .character-img {
+    margin-top: 80px;
   }
 }
 
-/* Animasi slide dari kanan untuk teks */
-@keyframes slideRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-.text {
-  flex: 1;
-  font-size: 18px;
-  line-height: 1.6;
-  animation: slideRight 1s ease-out forwards;
-  animation-delay: 0.3s; /* Biar muncul sedikit setelah gambar */
-  opacity: 0; /* Pastikan animasi bekerja dari 0 ke 1 */
-}
+@media (max-width: 480px) {
+      .description {
+        font-size: 13px;
+      }
+
+      .navbar-brand {
+        font-size: 12px;
+      }
+
+      .character-img {
+        max-width: 100%;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+      .character-img {
+      margin-top: 80px;
+  }
+    }
     </style>
 </head>
 <body>
@@ -122,10 +178,15 @@ body{
     <a href="contactarwi.html" class="nav-link">Contact</a>
   </div>
   </nav>
-  <div class="content">
-    <img src="../img/gambararwi/op.jpeg">
-    <div class="text">
-      <h1>Ini dia alasan saya kenapa saya memilih tema One piece</h1><br>
+
+  <div>
+   <div class="container">
+    <img src="../img/gambararwi/straw hat egg head.jpg" alt="Karakter" class="character-img"/>
+
+ 
+
+    <div class="description">
+       <h3>Ini dia alasan saya kenapa saya memilih tema One piece</h3><br>
         <p>saya menyukai alur cerita One Piece dikarenakan cerita dari anime ini banyak menceritakan tentang pesan moral. Anime atau pun manga One Piece ini bukan hanya sekedar petualangan para bajak laut namun petualangan ini juga menceritakan tentang nilai-nilai persahabatan, tekad, impian, dan keberanian untuk melawan setiap rintangan yang kita hadapi untuk mencapai tujuan, dan setiap karakter di One Piece ini memiliki motivasi yang besar untuk berjuang, dan latar belakang yang berbeda pada setiap karakternya. </p>
         <p>
           Selain itu, dunia yang luas ada di One Piece dan penuh dengan imajinasi yang memberikan pengalaman yang berbeda dari cerita lainnya. Eiichiro Oda sebagai sang pencipta One Piece, dia berhasil membangun dimensi semesta yang kompleks namun sangat konsisten yang dapat membuat penonton dan pembaca menjadi penasaran dan terikat secara emosional.
@@ -135,5 +196,8 @@ body{
         </p>
     </div>
   </div>
+
+</body>
+</html>
 </body>
 </html>

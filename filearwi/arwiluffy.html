@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brook</title>
-</head>
-<body>
+    <title>Monkay D. Luffy</title>
      <!-- navbar -->
    <style>
       @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
@@ -23,7 +20,7 @@ body{
   color: #e7e7e7;
 }
 .navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  background-color: transparent; /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
@@ -64,6 +61,147 @@ body{
 .nav-link:hover {
   color: goldenrod; /* Hover efek */
 }
+   /* Container */
+    .container {
+      text-align: center;
+      padding:82px 20px 40px;
+    }
+
+    /* Animasi gambar masuk dari atas */
+    .character-img {
+     width: 80%;
+      max-width: 600px;
+      height: auto;
+      opacity: 0;
+      transform: translateY(-100px);
+      animation: slideDown 1s ease-out forwards;
+      animation-delay: 0.5s;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Tombol */
+    .button {
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 2px solid #333;
+      background-color: white;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+    }
+
+    /* Teks Deskripsi */
+    .description {
+      max-width: 850px;
+      margin: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ffffff;
+      opacity: 0;
+      animation: ghostIn 1s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes ghostIn {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+     /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: calc(var(--nav-height) + 30px) 20px 30px;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* ⬇ Tambahan: pastikan gambar tidak terhalangi */
+  .character-img {
+    margin-top: 80px;
+  }
+}
+
+
+@media (max-width: 480px) {
+      .description {
+        font-size: 13px;
+      }
+
+      .navbar-brand {
+        font-size: 12px;
+      }
+
+      .character-img {
+        max-width: 100%;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+      .character-img {
+      margin-top: 80px;
+  }
+    }
+     .audio-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.audio-container p a {
+  font-family: "Pixelify Sans", system-ui;
+  color: #f97316; /* orange */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.audio-container p a:hover {
+  text-decoration: underline;
+  color: #ffd700; /* gold */
+}
+
+.audio-container audio {
+   display: none; /* menyembunyikan pemutar audio */
+}
     </style>
 </head>
 <body>
@@ -75,15 +213,35 @@ body{
     <a href="arwi.html" class="nav-link">One Piece menu</a>
   </div>
   </nav>
-
+<!-- image -->
   <div>
-    <img src="../img/gambararwi/luffy-one-piece-gear-5-5k-5120x2880-16574.jpg" alt="luffy gear 5">
-  </div>
+   <div class="container">
+    <img src="../img/gambararwi/luffy-one-piece-gear-5-5k-5120x2880-16574.jpg" alt="Karakter" class="character-img"/>
 
-  <div>
-    <p class="deskipsi">
-
-    </p>
+<!-- audio -->
+<div class="audio-container">
+  <p><a href="#" onclick="document.getElementById('audio-player').play()">🎧 Klik di sini untuk mendengarkan</a></p>
+  <audio id="audio-player" controls>
+    <source src="../audio/audioarwi/luffy.wav" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</div>
+<!-- deskripsi -->
+    <div class="description">
+      <p>Monkey D. Luffy, juga dikenal sebagai "Luffy Topi Jerami" adalah pendiri dan kapten dari Bajak Laut Topi Jerami yang semakin terkenal dan kuat, serta salah satu bajak laut terkuat dari generasi terburuk, dia ingin menemukan harta karun legendaris yang ditinggalkan oleh mendiang Gol D. Roger dan dengan demikian menjadi Raja Bajak Laut. Dia percaya bahwa menjadi Raja Bajak Laut berarti memiliki kebebasan terbesar di dunia.</p>
+      <br>
+      <p>Lahir di Desa Foosha, Luffy adalah anak dari Monkey D. Dragon, pemimpin dari Tentara Revolusioner, dan cucu dari pahlawan Marinir Monkey D. Garp, dan keluarga mereka membawa inisial dari Kehendak D. Pada usia 7 tahun, Luffy secara tidak sengaja memakan Gomu Gomu no Mi, yang mengubah tubuhnya menjadi karet, Shanks juga memberi Luffy topi jerami yang telah menjadi aksesori khas Luffy, setelah menghadiahkannya kepada Luffy sebagai bagian dari janji mereka untuk bertemu lagi suatu hari setelah dia menjadi bajak laut yang hebat. Tumbuh di Pulau Dawn di bawah asuhan Curly Dadan, Luffy berteman dan menjadi saudara tersumpah dari mendiang "Tinju Api" Portgas D. Ace dan Kepala Staf Revolusioner Sabo.</p>
+      <br>
+      <p>Luffy telah melawan banyak kekuatan global di sekitarnya, dimulai dengan melawan bajak laut paling kuat di East Blue dan pindah ke bentrokan melawan Marinir, Tujuh Panglima Perang Laut, Cipher Pol , Bangsawan Dunia, dan bahkan Empat Kaisar dari Grand Line, muncul sebagai pemenang di sebagian besar pertempuran ini. Dia menginvasi dan secara tidak langsung menyebabkan pemusnahan Enies Lobby, melarikan diri dari Impel Down yang tak tertembus, dan menjadi tokoh utama dalam Perang Puncak Marineford.</p>
+      <br>
+      <p>Dia juga telah mengalahkan atau berteman dengan tujuh dari sebelas Panglima Perang masa lalu atau sekarang yang dikenal sebelum pembubaran organisasi. Selanjutnya, Luffy telah menginvasi wilayah Empat Kaisar dalam beberapa kesempatan, dan akhirnya berhasil mengalahkan salah satunya. Prestasi dan warisan Luffy telah menyebabkan dia dicap sebagai "Elemen Masa Depan Yang Berbahaya".</p>
+      <br>
+      <p>Luffy juga memiliki kecenderungan untuk menarik pengikut dan dengan enggan dinobatkan sebagai pemimpin dari Armada Besar Topi Jerami, yang terdiri dari tujuh kru bajak laut yang bersumpah untuk datang membantunya setiap kali kru Topi Jerami dalam kesulitan. Setelah mengetahui hal ini dan tindakannya melawan Bajak Laut Big Mom, dunia pun menjulukinya sebagai "Kaisar Laut Kelima", meskipun banyak tokoh terkemuka pada awalnya menganggap ini dibesar-besarkan. Namun, setelah mengalahkan Kaidou selama Raid on Onigashima, Luffy secara resmi dinyatakan sebagai salah satu dari Empat Kaisar oleh Pemerintah Dunia bersama dengan Buggy, menggantikan Kaidou dan Big Mama.</p>
+      <br>
+      <p>Luffy telah membuat langkah luar biasa dalam kehidupan bajak laut, dengan hadiahnya sangat mencerminkan fakta ini. Dia mendapatkan hadiah pertamanya sebesar 30.000.000 karena mengalahkan kapten bajak laut terkuat di East Blue, yang kemudian meningkat menjadi 100.000.000 setelah mengalahkan Crocodile di Alabasta. Setelah itu invasi krunya ke dalam Enies Lobby dan melarikan diri dari sana, yang membuat hadiahnya dinaikkan menjadi 300.000.000. Karunia yang cukup besar setelah tiba di Kepulauan Sabaody menyebabkan Luffy, bersama dengan Zoro termasuk di antara sebelas "Super Rookie", bajak laut yang secara bersamaan mencapai Red Line dengan hadiah lebih dari 100.000.000 sesaat sebelum Perang Puncak.</p>
+      <br>
+      <p>Dua tahun setelah perang, dengan hadiahnya meningkat menjadi 400.000.000, dia memasuki Dunia Baru dan mulai menantang Kaisar dan sekutu mereka secara langsung, dengan hadiahnya naik menjadi 500.000.000 setelahnya Arc Dressrosa, dan kemudian hingga 1.500.000.000 setelah pengungkapan global bahwa dia adalah saudara Sabo dan keberadaan Armada Besar Topi Jerami menjadi publik, serta peristiwa Arc Pulau Whole Cake. Setelah memimpin Penggerebekan di Onigashima dan mengalahkan Kaidou serta dia menjadi anggota Empat Kaisar, hadiahnya dinaikkan menjadi 3.000.000.000.</p>
+    </div>
   </div>
 </body>
 </html>
