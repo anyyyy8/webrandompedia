@@ -160,7 +160,7 @@ body{
     }
 
     .card a:hover {
-      text-decoration: underline;
+      text-decoration:underline;
     }
     .image {
       border-radius: 10px;
@@ -177,7 +177,7 @@ body{
 
 .audio-container p a {
   font-family: "Pixelify Sans", system-ui;
-  color: #f97316; /* orange */
+  color: #f97316;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -187,9 +187,20 @@ body{
 
 .audio-container p a:hover {
   text-decoration: underline;
-  color: #ffd700; /* gold */
+  color: #ffd700;
 }
 
 .audio-container audio {
    display: none; /* menyembunyikan pemutar audio */
+}
+.warna1 {
+  color: #ff0000;
+  font-weight: italic;
+  text-shadow: 1px 1px 2px black;
+  margin-right: -10px;
+}
+
+.warna2 {
+  color: #ffffff;
+  font-style: italic;
 }

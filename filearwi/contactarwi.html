@@ -20,7 +20,7 @@ body{
   color: #e7e7e7;
 }
 .navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  background-color: transparent; /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
@@ -61,12 +61,26 @@ body{
 .nav-link:hover {
   color: goldenrod; /* Hover efek */
 }
+.warna1 {
+  color: #ff0000;
+  font-weight: italic;
+  text-shadow: 1px 1px 2px black;
+  margin-right: -10px;
+}
+
+.warna2 {
+  color: #ffffff;
+  font-style: italic;
+}
     </style>
 </head>
 <body>
      <nav class="navbar">
-  <div class="navbar-brand">Arwinata</div>
-  <div class="navbar-nav" id="navMenu">
+<div class="navbar-brand">
+    <Span class="warna1">One</Span>
+    <span class="warna2">Piece</span>
+  </div>
+    <div class="navbar-nav" id="navMenu">
     <a href="index.html" class="nav-link">Home</a>
     <a href="arwi.html" class="nav-link">One Piece menu</a>
     <a href="aboutarwi.html" class="nav-link">about</a>
