@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monkay D. Luffy</title>
-</head>
-<body>
-     <!-- navbar -->
-   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .image {
     background-position: top center;
   }
@@ -82,8 +72,7 @@ body{
       animation: slideDown 1s ease-out forwards;
       animation-delay: 0.5s;
       border-radius: 12px;
-      box-shadow: 0 8px 20px black;
-      margin-bottom: 50px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
     @keyframes slideDown {
@@ -92,16 +81,33 @@ body{
         transform: translateY(0);
       }
     }
+
+    /* Tombol */
+    .button {
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 2px solid #333;
+      background-color: white;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+    }
+
+    /* Teks Deskripsi */
     .description {
-      max-width: 700px;
+      max-width: 600px;
       margin: auto;
       font-size: 14px;
-      color: rgb(255, 255, 255);
+      line-height: 1.6;
+      color: #ffffff;
       opacity: 0;
       animation: ghostIn 1s ease forwards;
       animation-delay: 1.5s;
     }
-   
 
     @keyframes ghostIn {
   from {
@@ -113,7 +119,7 @@ body{
     opacity: 1;
   }
 }
-    /* RESPONSIVE DESIGN */
+     /* RESPONSIVE DESIGN */
     @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -168,7 +174,30 @@ body{
       margin-top: 80px;
   }
     }
-    .warna1 {
+        .audio-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.audio-container p a {
+  font-family: "Pixelify Sans", system-ui;
+  color: #f97316;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.audio-container p a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+.audio-container audio {
+   display: none; /* menyembunyikan pemutar audio */
+}
+.warna1 {
   color: #ff0000;
   font-style: italic;
   text-shadow: 1px 1px 2px black;
@@ -179,41 +208,3 @@ body{
   color: #ffffff;
   font-style: italic;
 }
-    </style>
-</head>
-<body>
-     <!-- navbar -->
-    <nav class="navbar">
-  <div class="navbar-brand">
-    <Span class="warna1">One</Span>
-    <span class="warna2">Piece</span>
-  </div>
-  <div class="navbar-nav" id="navMenu">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="arwi.html" class="nav-link">One Piece menu</a>
-    <a href="contactarwi.html" class="nav-link">Contact</a>
-  </div>
-  </nav>
-
-  <div>
-   <div class="container">
-    <img src="../img/gambararwi/straw hat egg head.jpg" alt="Karakter" class="character-img"/>
-
- 
-
-    <div class="description">
-       <h3>Ini dia alasan saya kenapa saya memilih tema One piece</h3><br>
-        <p>saya menyukai alur cerita One Piece dikarenakan cerita dari anime ini banyak menceritakan tentang pesan moral. Anime atau pun manga One Piece ini bukan hanya sekedar petualangan para bajak laut namun petualangan ini juga menceritakan tentang nilai-nilai persahabatan, tekad, impian, dan keberanian untuk melawan setiap rintangan yang kita hadapi untuk mencapai tujuan, dan setiap karakter di One Piece ini memiliki motivasi yang besar untuk berjuang, dan latar belakang yang berbeda pada setiap karakternya. </p>
-        <p>
-          Selain itu, dunia yang luas ada di One Piece dan penuh dengan imajinasi yang memberikan pengalaman yang berbeda dari cerita lainnya. Eiichiro Oda sebagai sang pencipta One Piece, dia berhasil membangun dimensi semesta yang kompleks namun sangat konsisten yang dapat membuat penonton dan pembaca menjadi penasaran dan terikat secara emosional.
-        </p>
-        <p>
-          Saya semakin tertarik dengan One Piece ketika mereka mulai membahas tentang isu-isu politik secara halus seperti keadilan, diskriminasi, dan kebebasan. Hal ini yang membuat saya merasa bahwa One Piece ini bukan hanya sekedar hiburan biasa, tetapi mereka juga memberikan pelajaran tentang hidup yang bermakna.
-        </p>
-    </div>
-  </div>
-
-</body>
-</html>
-</body>
-</html>
