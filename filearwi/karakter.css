@@ -1,9 +1,4 @@
-<<<<<<< HEAD
  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
-=======
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
->>>>>>> dd82eb1e46bfce50644188e878fb2aed32817400
-
 @media (max-width: 768px) {
   .image {
     background-position: top center;
@@ -21,11 +16,8 @@ body{
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
-<<<<<<< HEAD
   padding: 16px 14px;
-=======
   padding: 16px 40px;
->>>>>>> dd82eb1e46bfce50644188e878fb2aed32817400
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -43,14 +35,13 @@ body{
   color: rgb(255, 255, 255);
 }
 .navbar-brand {
-<<<<<<< HEAD
+
     text-decoration: none;
   font-size: 20px;
-=======
+
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 25px;
->>>>>>> dd82eb1e46bfce50644188e878fb2aed32817400
 }
 
 .navbar-nav {
@@ -67,12 +58,9 @@ body{
 .nav-link:hover {
   color: goldenrod; /* Hover efek */
 }
-<<<<<<< HEAD
 .show {
   display: flex !important;
 }
-=======
->>>>>>> dd82eb1e46bfce50644188e878fb2aed32817400
    /* Container */
     .container {
       text-align: center;
@@ -216,11 +204,8 @@ body{
 }
 .warna1 {
   color: #ff0000;
-<<<<<<< HEAD
   font-style: italic;
-=======
   font-weight: italic;
->>>>>>> dd82eb1e46bfce50644188e878fb2aed32817400
   text-shadow: 1px 1px 2px black;
   margin-right: -10px;
 }
