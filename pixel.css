@@ -11,6 +11,7 @@ body{
   font-size: 20px;
   text-align:center;
   padding: 30px;
+  padding-top: 0;
 }
 .navbar {
   background-color: transparent; /* Latar belakang transparan */
@@ -63,6 +64,7 @@ body{
       gap: 20px;
       padding: 40px;
       background-color: #424242;
+      align-items: center;
     }
 
     .card {
@@ -113,10 +115,11 @@ body{
     .image {
       border-radius: 10px;
      width: 100%; /* lebar 100% dari viewport */
-  height: 100vh; /* tinggi 100% dari viewport */
+
   background-position: center; /* pusatkan gambar */
   background-size: cover; /* pastikan gambar mengisi seluruh area */
   background-repeat: no-repeat;
+  object-fit: cover;
     }
     .audio-container {
   text-align: center;
