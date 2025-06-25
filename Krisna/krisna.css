@@ -97,6 +97,7 @@ nav a {
   width: 200px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  
 }
 
 .agency-card:hover {
@@ -209,7 +210,8 @@ footer {
   border-top: 2px solid #90a4ae;
   border-radius: 10px;
 }
-/* === RESPONSIVE FIXES UNTUK MOBILE === */
+
+
 @media (max-width: 600px) {
   /* Hindari efek scale yang bisa dorong konten keluar viewport */
   .talent-card:hover,
@@ -224,7 +226,8 @@ footer {
   .talent-card {
     margin: 0 auto;
     width: 90%;
-    max-width: 320px;
+    max-width: 200px;
+
   }
 
   /* Batasi padding jika terlalu besar */
