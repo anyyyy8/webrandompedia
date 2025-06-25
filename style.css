@@ -37,6 +37,7 @@
   .member-list {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 15px;
+    max-width: 200px;
   }
 
   .member-item {
@@ -146,6 +147,7 @@
 
   .member-item {
     width: 110px;
+    max-width: 200px;
   }
 
   .member-item img {
