@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>RandomPedia - Retro Game World</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RandomPedia - Retro Game World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">RandomPedia</h1>
-        <button onclick="goToRandomPage()" class="main-button">Buka Halaman Random</button>
 
-        <div class="member-section">
-            <h2 class="section-title">Member RandomPedia</h2>
-            <ul class="member-list">
-                <li class="member-item">
-                    <a href="filearwi/arwi.html">
-                        <img src="img/gambararwi/one piece logo_one piece logo design_one piece logo wallpapers_one piece logo png_ logo tattoo_.jpeg" alt="Arwi" />
-                        <span>Arwi</span>
-                    </a>
-                </li>
-                <li class="member-item">
-                    <a href="Krisna/krisna.html">
-                        <img src="img/kaela.png" alt="Krisna" />
-                        <span>Krisna</span>
-                    </a>
-                </li>
-                <li class="member-item">
-                    <a href="sela.html">
-                        <img src="img/sela.png" alt="Sela" />
-                        <span>Sela</span>
-                    </a>
-                </li>
-                <li class="member-item">
-                    <a href="vivi.html">
-                        <img src="img/vivi.png" alt="Vivi" />
-                        <span>Vivi</span>
-                    </a>
-                </li>
-                <li class="member-item">
-                    <a href="viani.html">
-                        <img src="img/viani.png" alt="Viani" />
-                        <span>Viani</span>
-                    </a>
-                </li>
-                <li class="member-item">
-                    <a href="asrida.html">
-                        <img src="img/asrida.png" alt="Asrida" />
-                        <span>Asrida</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <nav class="navbar">
+    <div class="nav-logo">RandomPedia</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Kategori ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Pixel Art</a></li>
+          <li><a href="sela.html">Makanan</a></li>
+          <li><a href="Krisna/krisna.html">Vtubers</a></li>
+          <li><a href="filearwi/arwi.html">Anime</a></li>
+        </ul>
+      </li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="title">RandomPedia</h1>
+    <button onclick="goToRandomPage()" class="main-button">Buka Halaman Random</button>
+
+    <div class="member-section">
+      <h2 class="section-title">Member RandomPedia</h2>
+      <ul class="member-list">
+        <li class="member-item">
+          <a href="filearwi/arwi.html">
+            <img src="img/gambararwi/one piece logo_one piece logo design_one piece logo wallpapers_one piece logo png_ logo tattoo_.jpeg" alt="Arwi" />
+            <span>Arwi</span>
+          </a>
+        </li>
+        <li class="member-item">
+          <a href="Krisna/krisna.html">
+            <img src="img/kaela.png" alt="Krisna" />
+            <span>Krisna</span>
+          </a>
+        </li>
+        <li class="member-item">
+          <a href="sela.html">
+            <img src="img/gambarkrisna/iofi.jpeg" alt="Sela" />
+            <span>Sela</span>
+          </a>
+        </li>
+        <li class="member-item">
+          <a href="vivi.html">
+            <img src="img/gambarkrisna/hyona.jpg" alt="Vivi" />
+            <span>Vivi</span>
+          </a>
+        </li>
+        <li class="member-item">
+          <a href="viani.html">
+            <img src="img/gambarkrisna/kana.jpg" alt="Viani" />
+            <span>Viani</span>
+          </a>
+        </li>
+        <li class="member-item">
+          <a href="asrida.html">
+            <img src="img/gambarkrisna/siska.jpg" alt="Asrida" />
+            <span>Asrida</span>
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <script>
-        function goToRandomPage() {
-            const pages = [
-                "Krisna/krisna.html",
-                "sela.html",
-                "vivi.html",
-                "arwi.html",
-                "asrida.html",
-                "viani.html"
-            ];
-            const randomPage = pages[Math.floor(Math.random() * pages.length)];
-            window.location.href = randomPage;
-        }
-    </script>
+  <footer class="footer">
+    <p>&copy; 2025 RandomPedia. All rights reserved. | Made by Kelompok 3</p>
+  </footer>
+
+  <script>
+    function goToRandomPage() {
+      const pages = [
+        "Krisna/krisna.html",
+        "sela.html",
+        "vivi.html",
+        "filearwi/arwi.html",
+        "asrida.html",
+        "viani.html"
+      ];
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.location.href = randomPage;
+    }
+  </script>
+
 </body>
 </html>
