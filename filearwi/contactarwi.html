@@ -3,144 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <title>Contact</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-@media (max-width: 768px) {
-  .image {
-    background-position: top center;
-  }
-}
+        /* Variabel CSS untuk tinggi navbar */
+        /* :root {
+            --nav-height: 70px; /* Sesuaikan ini jika tinggi navbar Anda berubah */
+        /* } */
 
-body{
-  font-family: "Press Start 2P", system-ui;
-    margin: 0 auto;
-  background-color: #424242;
-  color: #e7e7e7;
-}
+        body {
+            font-family: "Press Start 2P", system-ui;
+            margin: 0;
+            background-color: #424242; /* Tema gelap pixel */
+            color: #e7e7e7; /* Teks terang */
+            display: flex; /* Untuk memusatkan konten main */
+            flex-direction: column; /* Konten diatur secara kolom */
+            align-items: center; /* Pusatkan secara horizontal */
+            min-height: 100vh; /* Pastikan body mengambil tinggi penuh viewport */
+        }
+
 .navbar {
-  background-color: transparent; /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 14px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
+            background-color:transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 14px;
+            position: fixed;
+            width: 100%;
+            height: var(--nav-height); /* Set tinggi navbar */
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        
+        .navbar-brand {
+            text-decoration: none;
+            font-size: 20px;
+        }
 
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-    text-decoration: none;
-  font-size: 20px;
-}
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+        }
 
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
+        .nav-link {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 15px;
+            position: relative; /* Untuk efek hover garis bawah */
+        }
 
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
+        .nav-link:hover {
+            color: goldenrod; /* Hover efek */
+        }
 
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
-.show {
-  display: flex !important;
-}
-.warna1 {
-  color: #ff0000;
-  font-style: italic;
-  text-shadow: 1px 1px 2px black;
-  margin-right: -10px;
-}
+        .nav-link::after { /* Efek garis bawah saat hover */
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Sesuaikan posisi garis bawah */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: goldenrod; /* Warna garis bawah saat hover */
+            transition: width 0.1s linear;
+        }
 
-.warna2 {
-  color: #ffffff;
-  font-style: italic;
-}
- @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: calc(var(--nav-height) + 30px) 20px 30px;
-    gap: 30px;
-  }
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 10px;
-    height: auto;
-  }
+        .show {
+            display: flex !important;
+        }
+        .warna1 {
+            color: #ff0000;
+            font-style: italic;
+            text-shadow: 1px 1px 2px black;
+            margin-right: -10px;
+        }
+        .warna2 {
+            color: #ffffff;
+            font-style: italic;
+        }
 
-  .navbar-brand {
-    font-size: 14px;
-  }
+        .contact-section {
+            background-color: #333333; /* Warna latar belakang untuk form, kontras dengan body */
+            border: 2px solid #000; /* Border tebal pixelated */
+            padding: 30px;
+            width: 90%;
+            max-width: 800px; /* Lebar maksimal form */
+            box-shadow: 4px 4px #222222; /* Efek shadow pixelated, disesuaikan dengan tema gelap */
+            box-sizing: border-box;
+            margin-top: 85px; /* Jarak dari navbar + sedikit ruang */
+            margin-bottom: 30px; /* Jarak dari bawah */
+            border-radius: 5px; /* Sedikit lengkungan untuk efek pixel yang lebih halus, bisa dihilangkan jika tidak diinginkan */
+        }
 
-  .nav-link {
-    font-size: 13px;
-  }
+        .contact-form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tiga kolom untuk nama, email, telepon */
+            gap: 30px; /* Jarak antar elemen form */
+        }
 
-  .description {
-    font-size: 14px;
-  }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
 
-  /* ⬇ Tambahan: pastikan gambar tidak terhalangi */
-  .character-img {
-    margin-top: 80px;
-  }
-}
+        .form-group.full-width {
+            grid-column: 1 / -1; /* Mengambil seluruh lebar grid untuk textarea */
+        }
 
+        .form-label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #e7e7e7; /* Warna label agar terlihat di latar belakang gelap */
+            text-transform: capitalize;
+            text-shadow: 1px 1px #000; /* Efek shadow untuk label */
+        }
 
-@media (max-width: 480px) {
-      .description {
-        font-size: 13px;
-      }
+        .pixel-input,
+        .pixel-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e7e7e7; /* Border input pixelated, warna terang */
+            background-color: #555555; /* Latar belakang input, kontras dengan border */
+            color: #e7e7e7; /* Warna teks input */
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+            resize: vertical;
+        }
 
-      .navbar-brand {
-        font-size: 12px;
-      }
+        .pixel-input:focus,
+        .pixel-textarea:focus {
+            border-color: goldenrod; /* Warna border saat fokus */
+            box-shadow: 2px 2px #444; /* Efek shadow saat fokus */
+            background-color: #666666; /* Sedikit lebih terang saat fokus */
+        }
 
-      .character-img {
-        max-width: 100%;
-      }
+        .pixel-textarea {
+            min-height: 150px;
+        }
 
-      .nav-link {
-        font-size: 12px;
-      }
-      .character-img {
-      margin-top: 80px;
-  }
-    }
+        .pixel-button {
+            grid-column: 1 / -1;
+            justify-self: center;
+            padding: 12px 30px;
+            background-color: #007BFF; /* Warna biru untuk tombol, sesuaikan jika ingin hijau */
+            color: white;
+            border: 2px solid #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 4px 4px #000;
+            text-transform: uppercase;
+            transition: all 0.05s ease;
+        }
+
+        .pixel-button:hover {
+            background-color: #0056b3; /* Warna hover */
+            box-shadow: 2px 2px #000;
+            transform: translate(2px, 2px);
+        }
+
+        .pixel-button:active {
+            background-color: #003e8e; /* Warna saat diklik */
+            box-shadow: 0 0 #000;
+            transform: translate(4px, 4px);
+        }
+        
+.footer {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            
+        }
+
+        .copyright-text {
+            font-size: 12px; /* Ukuran font lebih kecil */
+        }
+        /* Responsif */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                height: auto; /* Biarkan tinggi menyesuaikan */
+                padding-bottom: 10px;
+            }
+            .navbar-nav {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                margin-top: 10px; /* Jarak antara brand dan menu di mobile */
+            }
+            .contact-section {
+                grid-template-columns: 1fr; /* Satu kolom untuk semua input di layar kecil */
+                width: 95%; /* Sedikit lebih lebar di mobile */
+                padding: 20px; /* Kurangi padding di mobile */
+                margin-top: calc(var(--nav-height) + 80px); /* Sesuaikan jika navbar di mobile jadi lebih tinggi */
+            }
+            .contact-form {
+                grid-template-columns: 1fr; /* Satu kolom untuk semua input di layar kecil */
+                gap: 20px; /* Kurangi jarak antar elemen */
+            }
+            .form-label {
+                font-size: 12px;
+            }
+            .pixel-input,
+            .pixel-textarea,
+            .pixel-button {
+                font-size: 12px;
+                padding: 10px;
+            }
+            .pixel-textarea {
+                min-height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-brand {
+                font-size: 16px;
+            }
+            .nav-link {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
-     <nav class="navbar">
-<div class="navbar-brand">
-    <Span class="warna1">One</Span>
-    <span class="warna2">Piece</span>
-  </div>
-    <div class="navbar-nav" id="navMenu">
-    <a href="../index.html" class="nav-link">Home</a>
-    <a href="arwi.html" class="nav-link">One Piece menu</a>
-    <a href="aboutarwi.html" class="nav-link">about</a>
-  </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="warna1">One</span>
+            <span class="warna2">Piece</span>
+        </div>
+        <div class="navbar-nav" id="navMenu">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="arwi.html" class="nav-link">One Piece menu</a>
+            <a href="aboutarwi.html" class="nav-link">about</a>
+        </div>
+    </nav>
+
+    <main class="contact-section">
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="nama" class="form-label">nama</label>
+                <input type="text" id="nama" name="nama" class="pixel-input">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">email</label>
+                <input type="email" id="email" name="email" class="pixel-input">
+            </div>
+
+            <div class="form-group">
+                <label for="telepon" class="form-label">telepon</label>
+                <input type="tel" id="telepon" name="telepon" class="pixel-input">
+            </div>
+
+            <div class="form-group full-width">
+                <label for="kritik-saran" class="form-label">Kritik atau saran</label>
+                <textarea id="kritik-saran" name="kritik-saran" class="pixel-textarea"></textarea>
+            </div>
+            <button type="submit" class="pixel-button">kirim</button>
+        </form>
+    </main>
+      <footer class="footer">
+        <p class="copyright-text">&copy; <span id="currentYear"></span> One Piece Website. Dibuat oleh Nakama.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk menampilkan tahun saat ini secara otomatis
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

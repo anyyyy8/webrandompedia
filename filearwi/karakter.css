@@ -1,10 +1,4 @@
  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
-@media (max-width: 768px) {
-  .image {
-    background-position: top center;
-  }
-}
-
 body{
   font-family: "Press Start 2P", system-ui;
     margin: 0 auto;
@@ -12,46 +6,53 @@ body{
   color: #e7e7e7;
 }
 .navbar {
-  background-color: transparent; /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 14px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
+            background-color: transparent; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 14px;
+            position: fixed;
+            width: 100%;
+            height: var(--nav-height); /* Set tinggi navbar */
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        
+        .navbar-brand {
+            text-decoration: none;
+            font-size: 20px;
+        }
 
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-    text-decoration: none;
-  font-size: 20px;
-}
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+        }
 
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
+        .nav-link {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 15px;
+            position: relative; /* Untuk efek hover garis bawah */
+        }
 
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
+        .nav-link:hover {
+            color: goldenrod; /* Hover efek */
+        }
 
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
+        .nav-link::after { /* Efek garis bawah saat hover */
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Sesuaikan posisi garis bawah */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: goldenrod; /* Warna garis bawah saat hover */
+            transition: width 0.1s linear;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
 .show {
   display: flex !important;
 }
@@ -119,7 +120,48 @@ body{
     opacity: 1;
   }
 }
-     /* RESPONSIVE DESIGN */
+.audio-container p a {
+  font-family: "Pixelify Sans", system-ui;
+  color: #f97316;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.audio-container p a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+.audio-container audio {
+   display: none; /* menyembunyikan pemutar audio */
+}
+.warna1 {
+  color: #ff0000;
+  font-style: italic;
+  font-weight: italic;
+  text-shadow: 1px 1px 2px black;
+  margin-right: -10px;
+}
+
+.warna2 {
+  color: #ffffff;
+  font-style: italic;
+}
+.footer {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            
+        }
+
+        .copyright-text {
+            font-size: 12px; /* Ukuran font lebih kecil */
+        }
+        
+   /* RESPONSIVE DESIGN */
     @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -153,7 +195,6 @@ body{
   }
 }
 
-
 @media (max-width: 480px) {
       .description {
         font-size: 13px;
@@ -177,35 +218,4 @@ body{
         .audio-container {
   text-align: center;
   margin: 30px auto;
-}
-
-.audio-container p a {
-  font-family: "Pixelify Sans", system-ui;
-  color: #f97316;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.audio-container p a:hover {
-  text-decoration: underline;
-  color: #ffd700;
-}
-
-.audio-container audio {
-   display: none; /* menyembunyikan pemutar audio */
-}
-.warna1 {
-  color: #ff0000;
-  font-style: italic;
-  font-weight: italic;
-  text-shadow: 1px 1px 2px black;
-  margin-right: -10px;
-}
-
-.warna2 {
-  color: #ffffff;
-  font-style: italic;
 }

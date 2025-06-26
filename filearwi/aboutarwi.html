@@ -23,46 +23,53 @@ body{
   color: #e7e7e7;
 }
 .navbar {
-  background-color: transparent; /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 14px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
+            background-color:transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 14px;
+            position: fixed;
+            width: 100%;
+            height: var(--nav-height); /* Set tinggi navbar */
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        
+        .navbar-brand {
+            text-decoration: none;
+            font-size: 20px;
+        }
 
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-    text-decoration: none;
-  font-size: 20px;
-}
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+        }
 
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
+        .nav-link {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 15px;
+            position: relative; /* Untuk efek hover garis bawah */
+        }
 
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
+        .nav-link:hover {
+            color: goldenrod; /* Hover efek */
+        }
 
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
+        .nav-link::after { /* Efek garis bawah saat hover */
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Sesuaikan posisi garis bawah */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: goldenrod; /* Warna garis bawah saat hover */
+            transition: width 0.1s linear;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
 .show {
   display: flex !important;
 }
@@ -114,6 +121,16 @@ body{
     opacity: 1;
   }
 }
+.footer {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            
+        }
+
+        .copyright-text {
+            font-size: 12px; /* Ukuran font lebih kecil */
+        }
     /* RESPONSIVE DESIGN */
     @media (max-width: 768px) {
   .container {
@@ -204,18 +221,25 @@ body{
 
     <div class="description">
        <h3>Ini dia alasan saya kenapa saya memilih tema One piece</h3><br>
+       <img src="../img/gambararwi/logo op.jpeg" style="width:50%;margin-bottom:30px;"/>
         <p>saya menyukai alur cerita One Piece dikarenakan cerita dari anime ini banyak menceritakan tentang pesan moral. Anime atau pun manga One Piece ini bukan hanya sekedar petualangan para bajak laut namun petualangan ini juga menceritakan tentang nilai-nilai persahabatan, tekad, impian, dan keberanian untuk melawan setiap rintangan yang kita hadapi untuk mencapai tujuan, dan setiap karakter di One Piece ini memiliki motivasi yang besar untuk berjuang, dan latar belakang yang berbeda pada setiap karakternya. </p>
-        <img src="../img/gambararwi/gomugomu.gif" style="width:50%;margin-bottom:30px;"/> 
+       <br>
         <p>
           Selain itu, dunia yang luas ada di One Piece dan penuh dengan imajinasi yang memberikan pengalaman yang berbeda dari cerita lainnya. Eiichiro Oda sebagai sang pencipta One Piece, dia berhasil membangun dimensi semesta yang kompleks namun sangat konsisten yang dapat membuat penonton dan pembaca menjadi penasaran dan terikat secara emosional.
         </p>
+        <br>
         <p>
           Saya semakin tertarik dengan One Piece ketika mereka mulai membahas tentang isu-isu politik secara halus seperti keadilan, diskriminasi, dan kebebasan. Hal ini yang membuat saya merasa bahwa One Piece ini bukan hanya sekedar hiburan biasa, tetapi mereka juga memberikan pelajaran tentang hidup yang bermakna.
         </p>
     </div>
   </div>
+  <footer class="footer">
+        <p class="copyright-text">&copy; <span id="currentYear"></span> One Piece Website. Dibuat oleh Nakama.</p>
+    </footer>
 
-</body>
-</html>
+    <script>
+        // JavaScript untuk menampilkan tahun saat ini secara otomatis
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
