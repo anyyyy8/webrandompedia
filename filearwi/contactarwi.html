@@ -7,11 +7,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-        /* Variabel CSS untuk tinggi navbar */
-        /* :root {
-            --nav-height: 70px; /* Sesuaikan ini jika tinggi navbar Anda berubah */
-        /* } */
-
         body {
             font-family: "Press Start 2P", system-ui;
             margin: 0;
@@ -31,7 +26,6 @@
             padding: 16px 14px;
             position: fixed;
             width: 100%;
-            height: var(--nav-height); /* Set tinggi navbar */
             z-index: 1000;
             box-sizing: border-box;
         }
@@ -129,7 +123,6 @@
             border: 2px solid #e7e7e7; /* Border input pixelated, warna terang */
             background-color: #555555; /* Latar belakang input, kontras dengan border */
             color: #e7e7e7; /* Warna teks input */
-            font-family: 'Press Start 2P', cursive;
             font-size: 14px;
             box-sizing: border-box;
             outline: none;
@@ -154,7 +147,6 @@
             background-color: #007BFF; /* Warna biru untuk tombol, sesuaikan jika ingin hijau */
             color: white;
             border: 2px solid #000;
-            font-family: 'Press Start 2P', cursive;
             font-size: 16px;
             cursor: pointer;
             box-shadow: 4px 4px #000;
@@ -202,8 +194,9 @@
                 grid-template-columns: 1fr; /* Satu kolom untuk semua input di layar kecil */
                 width: 95%; /* Sedikit lebih lebar di mobile */
                 padding: 20px; /* Kurangi padding di mobile */
-                margin-top: calc(var(--nav-height) + 80px); /* Sesuaikan jika navbar di mobile jadi lebih tinggi */
-            }
+                padding-bottom: 50px;
+                margin-top: 120px;
+                        }
             .contact-form {
                 grid-template-columns: 1fr; /* Satu kolom untuk semua input di layar kecil */
                 gap: 20px; /* Kurangi jarak antar elemen */
