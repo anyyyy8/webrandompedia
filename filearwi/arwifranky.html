@@ -3,77 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brook</title>
+    <title>Monkay D. Luffy</title>
+    <link rel="stylesheet" href="karakter.css">
 </head>
 <body>
-     <!-- navbar -->
-   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
-
-@media (max-width: 768px) {
-  .image {
-    background-position: top center;
-  }
-}
-
-body{
-  font-family: "Press Start 2P", system-ui;
-    margin: 0 auto;
-  background-color: #424242;
-  color: #e7e7e7;
-}
-.navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 40px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 25px;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
-    </style>
 </head>
 <body>
      <!-- navbar -->
     <nav class="navbar">
-  <div class="navbar-brand">Arwinata</div>
+ <div class="navbar-brand">
+    <Span class="warna1">One</Span>
+    <span class="warna2">Piece</span>
+  </div>
   <div class="navbar-nav" id="navMenu">
-    <a href="index.html" class="nav-link">Home</a>
+    <a href="../index.html" class="nav-link">Home</a>
     <a href="arwi.html" class="nav-link">One Piece menu</a>
   </div>
   </nav>
+
+  <div>
+   <div class="container">
+    <img src="../img/gambararwi/Franky 2.jpeg" alt="Karakter" class="character-img"/>
+
+     <div class="audio-container">
+  <p><a href="#" onclick="document.getElementById('audio-player').play()">🎧 Klik di sini untuk mendengarkan</a></p>
+  <audio id="audio-player" controls>
+    <source src="../audio/audioarwi/franky.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</div>
+
+    <div class="description">
+      <p>Franky si cyborg adalah anggota kru Bajak Laut Topi Jerami yang bertugas sebagai mekanik kapal Thousand Sunny. Pertama kali muncul sebagai pemimpin Keluarga Franky, sebuah genk bawah tanah yang menguasai jalanan Water 7. Ia bernama asli "Cutty Flam" namun kemudian diganti karena permintaan Iceburg.</p>
+      <br>
+      <img src="../img/gambararwi/frankybt.jpeg" style="width:50%;margin-bottom:30px;"/>
+      <p>Ia awalnya menjadi musuh kru topi jerami, namun berubah menjadi teman setelah perkembangan situasi memaksa mereka berbalik mendukung kru topi jerami. Setelah Franky mendapat bounty pertama, Keluarga Franky mendatangi kru topi jerami dan memohon agar merekrutnya.</p>
+      <br>
+      <img src="../img/gambararwi/franky-unscreen.gif" style="width:50%;margin-bottom:30px;"/>
+      <p>Ia menjadi anggota ke-8 kru topi jerami dan memiliki bounty sebesar  44.000.000 setelah insiden di Enies Lobby. Setelah Bajak Laut Topi Jerami berhasil mengalahkan Keluarga Donquixote di Dressrosa, Franky mendapat kenaikan bounty menjadi  94.000.000. Mimpinya adalah membuat sebuah kapal yang mampu mengarungi segala jenis lautan.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+        <p class="copyright-text">&copy; <span id="currentYear"></span> One Piece Website. Dibuat oleh Nakama.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk menampilkan tahun saat ini secara otomatis
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

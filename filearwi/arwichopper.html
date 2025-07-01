@@ -3,77 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brook</title>
+    <title>Monkay D. Luffy</title>
+    <link rel="stylesheet" href="karakter.css">
 </head>
 <body>
-     <!-- navbar -->
-   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
-
-@media (max-width: 768px) {
-  .image {
-    background-position: top center;
-  }
-}
-
-body{
-  font-family: "Press Start 2P", system-ui;
-    margin: 0 auto;
-  background-color: #424242;
-  color: #e7e7e7;
-}
-.navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 40px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 25px;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
-    </style>
 </head>
 <body>
      <!-- navbar -->
     <nav class="navbar">
-  <div class="navbar-brand">Arwinata</div>
+<div class="navbar-brand">
+    <Span class="warna1">One</Span>
+    <span class="warna2">Piece</span>
+  </div>
   <div class="navbar-nav" id="navMenu">
-    <a href="index.html" class="nav-link">Home</a>
+    <a href="../index.html" class="nav-link">Home</a>
     <a href="arwi.html" class="nav-link">One Piece menu</a>
   </div>
   </nav>
+
+  <div>
+   <div class="container">
+    <img src="../img/gambararwi/chopper 2.jpg" alt="Karakter" class="character-img"/>
+
+     <div class="audio-container">
+  <p><a href="#" onclick="document.getElementById('audio-player').play()">🎧 Klik di sini untuk mendengarkan</a></p>
+  <audio id="audio-player" controls>
+    <source src="../audio/audioarwi/chopper.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</div>
+
+    <div class="description">
+      <p>Tony Tony Chopper, juga dikenal sebagai "Pecinta Permen Kapas" Chopper adalah dokter dari Bajak Laut Topi Jerami dan salah satu Perwira Senior di Armada Besar Topi Jerami. Dia adalah anggota keenam dari kru Topi Jerami, bergabung pada akhir Arc Pulau Drum. Dia sempat dipaksa bergabung dengan Bajak Laut Foxy selama Arc Long Ring Long Land tetapi dengan cepat dikembalikan ke kru Luffy.</p>
+      <br>
+      <img src="../img/gambararwi/chopperbt.jpeg" style="width:50%;margin-bottom:30px;"/>
+      <p>Chopper adalah seekor rusa kutub yang memakan Hito Hito no Mi, sebuah Buah Iblis yang memungkinkan penggunanya untuk berubah menjadi manusia campuran sesuka hati. Ia diajari ilmu pengobatan di Pulau Drum oleh kedua orang tuanya, Dokter Hiriluk dan Kureha. Chopper bermaksud untuk menjelajahi seluruh dunia dengan harapan dapat mencapai mimpinya untuk dapat menyembuhkan penyakit apa pun.</p>
+      <br>
+      <img src="../img/gambararwi/chopper_no_bg.gif" style="width:50%;margin-bottom:30px;"/>
+      <p>Chopper mendapatkan hadiah pertamanya sebesar 50 setelah insiden di Enies Lobby, karena dikira sebagai peliharaan Topi Jerami. Setelah Arc Dressrosa, hadiahnya meningkat menjadi 100, lalu menjadi 1.000 setelah Serangan di Onigashima.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+        <p class="copyright-text">&copy; <span id="currentYear"></span> One Piece Website. Dibuat oleh Nakama.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk menampilkan tahun saat ini secara otomatis
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

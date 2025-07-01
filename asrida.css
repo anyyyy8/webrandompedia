@@ -1,0 +1,301 @@
+/* --- GLOBAL STYLES --- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffbcbc;
+  margin: 0;
+  padding: 0;
+  background-image: url('img/Gambar Asrida/Free Fire.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* --- NAVIGATION BAR --- */
+nav {
+  background-color: #f79797;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  flex-wrap: wrap;
+  background-image: url('0');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 8vh;
+}
+
+nav a {
+  color: black;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  background-color: #ddd;
+}
+
+/* --- INTRO / HOME SECTION --- */
+.full-screen-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.intro {
+  text-align: center;
+  margin: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+}
+
+.intro h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.intro h2 {
+  font-size: 2em;
+}
+
+.intro p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: rgba(255, 229, 229, 0.85);
+  margin: 40px auto;
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-img {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  margin-right: 20px;
+  max-width: 100%;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 2;
+  padding: 20px;
+  color: #333;
+  max-width: 600px;
+  background-color: #ff1d1d;
+  box-shadow: 0 4px 8px rgba(177, 16, 16, 0.1);
+  border-radius: 8px;
+}
+
+.about-text h2,
+.about-text h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* --- CHARACTER SECTION (Favorit & Lainnya) --- */
+.character-section {
+  padding: 20px;
+  background-color: rgba(255, 229, 229, 0.85);
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.character-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+  font-size: 1.6em;
+}
+
+.character-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.character-card {
+  background-color: #fff;
+  width: 180px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.character-card h3 {
+  margin: 8px 0 4px;
+  font-size: 1.1em;
+  color: #d13d3d;
+}
+
+.character-card p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.email-text {
+  color: blue;
+}
+
+.contact-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.contact-form {
+  background-color: #f4caca;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgb(201, 201, 255);
+  display: inline-block;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 1px 0;
+  border: 1px solid #ff8a8a;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #005203;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0c4e11;
+}
+
+/* --- BACK TO HOME BUTTON --- */
+.back-home {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#back-home a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007acc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#back-home a:hover {
+  background-color: #005f99;
+}
+
+/* --- RESPONSIVE MEDIA QUERY --- */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .character-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 90%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+#body.home, body.about, body.contact {
+  background-color: #ffc0cb; /* merah muda lembut */
+}

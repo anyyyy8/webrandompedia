@@ -29,39 +29,39 @@ const talents = {
     nijisanji: [
       {
         name: "Kuzuha",
-        image: "../img/gambarkrisna/kuzuha.png",
+        image: "../img/gambarkrisna/kuzuha.jpg",
         description: "Kuzuha adalah VTuber populer dari Nijisanji Jepang."
       },
       {
         name: "Kanae",
-        image: "../img/gambarkrisna/kanae.png",
+        image: "../img/gambarkrisna/kanae.jpg",
         description: "Kanae dikenal sebagai VTuber serba bisa di Nijisanji."
       },
       {
         name: "Mika Melatika",
-        image: "../img/gambarkrisna/mika.png",
+        image: "../img/gambarkrisna/mika.jpg",
         description: "Mika adalah VTuber asal Indonesia dari cabang Nijisanji ID."
       },
       {
         name: "Hyona Elatiora",
-        image: "../img/gambarkrisna/hyona.png",
+        image: "../img/gambarkrisna/hyona.jpg",
         description: "Hyona adalah VTuber enerjik dari Nijisanji ID."
       },
       {
         name: "Siska Leontyne",
-        image: "../img/gambarkrisna/siska.png",
+        image: "../img/gambarkrisna/siska.jpg",
         description: "Siska adalah salah satu anggota generasi awal Nijisanji ID."
       }
     ],
     vshojo: [
       {
         name: "Ironmouse",
-        image: "../img/gambarkrisna/ironmouse.png",
+        image: "../img/gambarkrisna/ironmouse.jpg",
         description: "Ironmouse dikenal karena suaranya yang khas dan energinya yang luar biasa."
       },
       {
         name: "Nyanners",
-        image: "../img/gambarkrisna/nyanners.png",
+        image: "../img/gambarkrisna/nyanners.jpg",
         description: "Nyanners adalah VTuber VShojo dengan humor absurd dan suara imut."
       },
       {
@@ -71,42 +71,43 @@ const talents = {
       },
       {
         name: "Projekt Melody",
-        image: "../img/gambarkrisna/melody.png",
+        image: "../img/gambarkrisna/melody.jpg",
         description: "Melody adalah VTuber AI dari VShojo yang populer di berbagai platform."
       },
       {
         name: "Zentreya",
-        image: "../img/gambarkrisna/zentreya.png",
+        image: "../img/gambarkrisna/zentreya.jpg",
         description: "Zentreya adalah VTuber bisu yang menggunakan teknologi teks untuk berbicara."
       }
     ],
-    indie: [
-      {
-        name: "Amano Pikamee",
-        image: "../img/gambarkrisna/pikamee.png",
-        description: "Pikamee adalah VTuber bilingual yang dulunya bagian dari VOMS Project."
-      },
-      {
-        name: "Koa Kana",
-        image: "../img/gambarkrisna/koa.png",
-        description: "Koa Kana adalah indie VTuber dengan suara dan desain yang unik."
-      },
-      {
-        name: "Baelz Moon",
-        image: "../img/gambarkrisna/baelz.png",
-        description: "Baelz adalah VTuber chaos yang sempat dikenal dari konten kreatifnya."
-      },
-      {
-        name: "Yoruno Hikari",
-        image: "../img/gambarkrisna/hikari.png",
-        description: "Hikari adalah VTuber indie dengan tema malam dan suara lembut."
-      },
-      {
-        name: "Makoto Kisaragi",
-        image: "../img/gambarkrisna/makoto.png",
-        description: "Makoto adalah VTuber indie dengan latar belakang seni dan musik."
-      }
-    ]
+      indie: [
+    {
+      name: "Amano Pikamee",
+      image: "../img/gambarkrisna/pikamee.jpg",
+      description: "Pikamee adalah VTuber bilingual yang dulunya bagian dari VOMS Project."
+    },
+    {
+      name: "Koa Kana",
+      image: "../img/gambarkrisna/kana.jpg",
+      description: "Koa Kana adalah indie VTuber dengan suara dan desain yang unik."
+    },
+    {
+      name: "Fillian",
+      image: "../img/gambarkrisna/fillian.jpg",
+      description: "Fillian adalah VTuber indie yang dikenal dengan konten santai dan ramah."
+    },
+    {
+      name: "Shoto",
+      image: "../img/gambarkrisna/shoto.jpg",
+      description: "Shoto adalah VTuber indie dengan gaya unik dan komunitas aktif."
+    },
+    {
+      name: "Vedal & Neuro-Sama",
+      image: "../img/gambarkrisna/neurosama.jpg",
+      description: "Neuro-sama adalah seorang V-tuber berbasis Ai Yang membuatnya unik"
+    }
+  ]
+
   };
   
 function showTalent(agency) {

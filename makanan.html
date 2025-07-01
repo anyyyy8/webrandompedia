@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Makanan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sela.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>RANDOM PEDIA</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li class="dropdown">
+            <a href="#">MENU</a>
+            <ul class="dropdown-content">
+              <li><a href="makanan.html">Makanan</a></li>
+              <li><a href="#">Minuman</a></li>
+            </ul>
+          </li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <hr />
+
+  <div class="menu-wrapper">
+    <div class="menu-row">
+      <!-- 4 Kotak pertama (atas) -->
+      <div class="menu-item">
+        <img src="img/seblak.jpg" alt="Seblak" />
+        <p>SEBLAK</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Seblak adalah makanan pedas khas Sunda yang dibuat dari kerupuk basah dimasak dengan bumbu rempah dan topping.</div>
+      </div>
+      <div class="menu-item">
+        <img src="img/donat.jpg" alt="Donat" />
+        <p>DONAT</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Donat kekinian dengan berbagai topping manis dan menarik, digemari berbagai kalangan anak muda.</div>
+      </div>
+      <div class="menu-item">
+        <img src="img/pizza.jpg" alt="Pizza" />
+        <p>PIZZA</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Pizza asal Italia yang populer, memiliki banyak varian rasa dengan topping keju dan saus.</div>
+      </div>
+      <div class="menu-item">
+        <img src="img/ramen.jpg" alt="Ramen" />
+        <p>RAMEN</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Ramen adalah mie Jepang yang disajikan dalam kuah kaldu dengan topping seperti telur, daging, dan rumput laut.</div>
+      </div>
+    </div>
+  
+    <div class="menu-row">
+      <!-- 3 Kotak berikutnya (bawah) -->
+      <div class="menu-item">
+        <img src="img/dimsum.jpg" alt="Dimsum" />
+        <p>DIMSUM</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Dimsum adalah makanan ringan khas Cina, biasanya dikukus atau digoreng dan disajikan dengan saus.</div>
+      </div>
+      <div class="menu-item">
+        <img src="img/topokki.jpg" alt="Toppoki" />
+        <p>TOPPOKI</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Toppoki adalah kue beras Korea yang disajikan dengan saus gochujang pedas manis dan sering diberi telur atau keju.</div>
+      </div>
+      <div class="menu-item">
+        <img src="img/bakso.jpg" alt="Bakso" />
+        <p>BAKSO</p>
+        <button onclick="toggleText(this)">Baca Selengkapnya</button>
+        <div class="info">Bakso adalah bola daging sapi Indonesia yang disajikan dalam kuah kaldu dengan mie, bihun, dan sayuran.</div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    function toggleText(button) {
+      // Ambil elemen info dari kotak yang diklik
+      const currentItem = button.parentElement;
+      const currentInfo = currentItem.querySelector('.info');
+      const isVisible = currentInfo.style.display === "block";
+  
+      // Sembunyikan semua info di kotak lain
+      document.querySelectorAll('.menu-item .info').forEach(info => {
+        info.style.display = "none";
+      });
+  
+      // Reset semua tombol jadi "Baca Selengkapnya"
+      document.querySelectorAll('.menu-item button').forEach(btn => {
+        btn.innerText = "Baca Selengkapnya";
+      });
+  
+      // Tampilkan atau sembunyikan info dari kotak yang diklik
+      if (!isVisible) {
+        currentInfo.style.display = "block";
+        button.innerText = "Tutup";
+      }
+    }
+  </script>
+  
+  
+  
+</body>
+</html>

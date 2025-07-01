@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me - Asrida Alunat</title>
+        <link rel="stylesheet" type="text/css" href="asrida.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about asrida.html">About Me</a>
+            <a href="contact asrida.html">Contact Me</a>
+        </nav>
+            <main style="text-align: center; padding: 20px;">
+                <section class="contact-header">
+                    <img src="img/Gambar Asrida/email.png" alt="Ikon Email" class="contact-img">
+                   <strong><p class="email-text">Email: asridaalunat@gmail.com</p></strong>
+                </section>
+                <section class="contact-header">
+                    <img src="img/Gambar Asrida/contact.webp" alt="Ikon Handphone" class="contact-img">
+                    <strong><p>Handphone: 085333082637</p></strong>
+                </section>
+                <section class="contact-form">
+                    <form action="send-message.php" method="POST">
+                        <div>
+                            <label for="Handphone"><strong>Handphone</strong></label><br>
+                            <input type="text" id="Handphone" name="Handphone" placeholder="Nomor Handphone" required>
+                        </div>
+
+                        <div>
+                            <label for="email"><strong>Email</strong></label><br>
+                            <input type="email" id="email" name="email" placeholder="Email Anda" required>
+                        </div>
+
+                        <div>
+                            <label for="message"><strong>Pesan</strong></label><br>
+                            <textarea id="message" name="message" placeholder="Tulis pesan Anda..." rows="4" required></textarea>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Kirim Pesan">
+                        </div>
+                    </form>
+                </section>
+            </main>
+
+    </body>
+</html>

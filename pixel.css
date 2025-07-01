@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-@media (max-width: 768px) {
-  .image {
-    background-position: top center;
-  }
-}
-
 body{
   font-family: "Press Start 2P", system-ui;
     margin: 0 auto;
@@ -15,79 +9,58 @@ body{
 .deskripsi{
   font-family: "Pixelify Sans", system-ui;
   font-size: 20px;
-  text-align: justify;
+  text-align:center;
   padding: 30px;
+  padding-top: 0;
 }
 .navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 40px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
+            background-color: transparent; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 14px;
+            position: fixed;
+            width: 100%;
+            height: var(--nav-height); /* Set tinggi navbar */
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        
+        .navbar-brand {
+            text-decoration: none;
+            font-size: 20px;
+        }
 
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 25px;
-}
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+        }
 
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
+        .nav-link {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 15px;
+            position: relative; /* Untuk efek hover garis bawah */
+        }
 
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
+        .nav-link:hover {
+            color: goldenrod; /* Hover efek */
+        }
 
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
-.dropdown {
-  position: relative;
-}
+        .nav-link::after { /* Efek garis bawah saat hover */
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Sesuaikan posisi garis bawah */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: goldenrod; /* Warna garis bawah saat hover */
+            transition: width 0.1s linear;
+        }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #444;
-  border: 1px solid #ffffff;
-  padding: 10px;
-  border-radius: 4px;
-  z-index: 1001;
-  flex-direction: column;
-}
-
-.dropdown-menu a {
-  display: block;
-  color: #ff0000;
-  text-decoration: none;
-  margin: 5px 0;
-  font-size: 12px;
-}
-
-.dropdown-menu a:hover {
-  color: #0f0;
-}
+        .nav-link:hover::after {
+            width: 100%;
+        }
 .show {
   display: flex !important;
 }
@@ -95,9 +68,10 @@ body{
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 20px;
       padding: 40px;
       background-color: #424242;
+      align-items: center;
     }
 
     .card {
@@ -105,8 +79,8 @@ body{
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      width: 300px;
-      text-align: left;
+      width: 250px;
+      text-align: center;
       transition: transform 0.3s ease;
     }
 
@@ -143,12 +117,112 @@ body{
     }
 
     .card a:hover {
-      text-decoration: underline;
+      text-decoration:underline;
     }
     .image {
+      border-radius: 10px;
      width: 100%; /* lebar 100% dari viewport */
-  height: 100vh; /* tinggi 100% dari viewport */
+
   background-position: center; /* pusatkan gambar */
   background-size: cover; /* pastikan gambar mengisi seluruh area */
   background-repeat: no-repeat;
+  object-fit: cover;
+    }
+    .audio-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.audio-container p a {
+  font-family: "Pixelify Sans", system-ui;
+  color: #f97316;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.audio-container p a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+.audio-container audio {
+   display: none; /* menyembunyikan pemutar audio */
+}
+.warna1 {
+  color: #ff0000;
+  font-style: italic;
+  text-shadow: 1px 1px 2px black;
+  margin-right: -10px;
+  
+}
+
+.warna2 {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.footer {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            
+        }
+
+        .copyright-text {
+            font-size: 12px; /* Ukuran font lebih kecil */
+        }
+        
+   @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: calc(var(--nav-height) + 30px) 20px 30px;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* ⬇ Tambahan: pastikan gambar tidak terhalangi */
+  .image {
+    margin-top: 80px;
+  }
+}
+
+
+@media (max-width: 480px) {
+      .navbar-brand {
+        font-size: 12px;
+      }
+
+      .character-img {
+        max-width: 100%;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+      .image {
+      margin-top: 80px;
+      
+  }
     }

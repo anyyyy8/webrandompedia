@@ -3,77 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brook</title>
+    <title>Monkay D. Luffy</title>
+    <link rel="stylesheet" href="karakter.css">
 </head>
 <body>
-     <!-- navbar -->
-   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
-
-@media (max-width: 768px) {
-  .image {
-    background-position: top center;
-  }
-}
-
-body{
-  font-family: "Press Start 2P", system-ui;
-    margin: 0 auto;
-  background-color: #424242;
-  color: #e7e7e7;
-}
-.navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
-  display: flex;
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* agar berada di tengah */
-  padding: 16px 40px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
-}
-.nav-left a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
-.nav-right {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-.navbar-brand {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 25px;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.nav-link:hover {
-  color: goldenrod; /* Hover efek */
-}
-    </style>
 </head>
 <body>
      <!-- navbar -->
     <nav class="navbar">
-  <div class="navbar-brand">Arwinata</div>
-  <div class="navbar-nav" id="navMenu">
-    <a href="index.html" class="nav-link">Home</a>
+<div class="navbar-brand">
+    <Span class="warna1">One</Span>
+    <span class="warna2">Piece</span>
+  </div>
+    <div class="navbar-nav" id="navMenu">
+    <a href="../index.html" class="nav-link">Home</a>
     <a href="arwi.html" class="nav-link">One Piece menu</a>
   </div>
   </nav>
+
+  <div>
+   <div class="container">
+    <img src="../img/gambararwi/zoro 2.jpg" alt="Karakter" class="character-img"/>
+
+     <div class="audio-container">
+  <p><a href="#" onclick="document.getElementById('audio-player').play()">🎧 Klik di sini untuk mendengarkan</a></p>
+  <audio id="audio-player" controls>
+    <source src="../audio/audioarwi/zoro.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</div>
+
+    <div class="description">
+      <p>Roronoa Zoro juga dikenal sebagai "Pemburu Bajak Laut" Zoro merupakan pejuang utama dari Bajak Laut Topi Jerami, salah satu dari dua pendekar mereka dan salah satu Perwira Senior dari Armada Besar Topi Jerami dan secara publik diakui sebagai tangan kanan dari kapten Monkey D. Luffy. Sebelumnya Zoro merupakan pemburu hadiah dan setelah bergabung ke dalam kru Topi Jerami dia secara resmi menjadi anggota kedua kru Luffy dan yang pertama bergabung, pada Arc Romance Dawn.</p>
+      <br>
+      <img src="../img/gambararwi/zorobt.jpeg" style="width:50%;margin-bottom:30px;"/>
+      <p>Lahir di East Blue, Zoro adalah putra Tera dan Roronoa Arashi, cucu dari Shimotsuki Furiko dan Roronoa Pinzoro, dikarenakan menjadi cucu dari Shimotsuki Furiko yang menjadikannya keturunan asli dari Keluarga Shimotsuki dari Negara Wano dan samurai legendaris, Shimotsuki Ryuma. Sebagai ahli Gaya Tiga Pedang, gaya ilmu pedang yang ia ciptakan selama pelatihan masa kecilnya di Desa Shimotsuki, Zoro adalah salah satu dari tiga petarung paling kuat di Topi Jerami, bersama Luffy dan Sanji , yang disebut sebagai "Trio Monster". Impiannya adalah menjadi pendekar pedang terhebat di dunia, untuk memenuhi janji yang dia buat kepada mendiang teman masa kecilnya Kuina.</p>
+      <br>
+      <p>Selain keburukannya sebagai salah satu Topi Jerami dan sebagai mantan pemburu hadiah, harga buronannya yang cukup besar saat tiba di Kepulauan Sabaody menyebabkan Zoro, bersama dengan Luffy termasuk di antara sebelas "Super Rookie", Zoro merupakan anggota bajak laut yang secara bersamaan mencapai Red Line dengan harga buronan lebih dari 100.000.000 sesaat sebelum Perang Puncak.</p>
+      <br>
+      <img src="../img/gambararwi/zoro_no_bg.gif" style="width:50%;margin-bottom:30px;"/>
+      <p>Zoro memperoleh bounty pertamanya sebesar 60.000.000 setelah Arc Alabasta. Kemudian meningkat menjadi 120.000.000 setelah insiden Enies Lobby, kemudian meningkat lagi menjadi 320.000.000 setelah Arc Dressrosa. Setelah Raid on Onigashima, harga buronannya ditingkatkan menjadi 1,111,000,000.</p>
+    </div>
+  </div>
+  <footer class="footer">
+        <p class="copyright-text">&copy; <span id="currentYear"></span> One Piece Website. Dibuat oleh Nakama.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk menampilkan tahun saat ini secara otomatis
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
